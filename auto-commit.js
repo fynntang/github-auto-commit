@@ -14,7 +14,7 @@ const cmd_push = "git push origin master"
 
 try {
     function pullNewCode () {
-        exec(cmd_pull)
+        //exec(cmd_pull)
     }
     
     function addNewCode () {
