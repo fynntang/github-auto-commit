@@ -14,7 +14,7 @@ const cmd_push = "git push origin master"
 
 try {
     function pullNewCode () {
-        //exec(cmd_pull)
+        exec(cmd_pull)
     }
     
     function addNewCode () {
@@ -26,7 +26,7 @@ try {
         exec(cmd_commit)
         exec(cmd_push)
     }
-    let t = schedule.scheduleJob('1 43 16 * * *',()=>{
+    let t = schedule.scheduleJob('1 47 16 * * *',()=>{
         pullNewCode()
         addNewCode()
         console.log('scheduleCronstyle:' + new Date());
