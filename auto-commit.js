@@ -26,7 +26,7 @@ try {
         exec(cmd_commit)
         exec(cmd_push)
     }
-    let t = schedule.scheduleJob('1 1 1 * * *',()=>{
+    let t = schedule.scheduleJob('1 1 11 * * *',()=>{
         pullNewCode()
         addNewCode()
         console.log('scheduleCronstyle:' + new Date());
