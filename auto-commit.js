@@ -1,5 +1,3 @@
-const koa = require('koa')
-const app = new koa()
 const schedule = require('node-schedule')
 const chalk = require('chalk')
 const fs = require('fs')
@@ -35,6 +33,3 @@ try {
 } catch (err) {
     console.log(chalk.red('脚本出错 错误详情： ', err))
 }
-
-console.log('启动成功 localhost: 3000')
-app.listen(3000)
