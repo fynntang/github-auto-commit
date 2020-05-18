@@ -24,26 +24,26 @@ try {
         exec(cmd_commit)
         exec(cmd_push)
     }
-    schedule.scheduleJob('0 53 22 * * *',()=>{
+    schedule.scheduleJob('0 0 14 * * *',()=>{
         pullNewCode()
         addNewCode()
         console.log('scheduleCronstyle:' + new Date());
         pushNewCode()
     });
 
-    // schedule.scheduleJob('0 0 15 * * *',()=>{
-    //     pullNewCode()
-    //     addNewCode()
-    //     console.log('scheduleCronstyle:' + new Date());
-    //     pushNewCode()
-    // });
+    schedule.scheduleJob('0 0 15 * * *',()=>{
+        pullNewCode()
+        addNewCode()
+        console.log('scheduleCronstyle:' + new Date());
+        pushNewCode()
+    });
 
-    // schedule.scheduleJob('0 0 16 * * *',()=>{
-    //     pullNewCode()
-    //     addNewCode()
-    //     console.log('scheduleCronstyle:' + new Date());
-    //     pushNewCode()
-    // });
+    schedule.scheduleJob('0 0 16 * * *',()=>{
+        pullNewCode()
+        addNewCode()
+        console.log('scheduleCronstyle:' + new Date());
+        pushNewCode()
+    });
 } catch (err) {
     console.log(chalk.red('脚本出错 错误详情： ', err))
 }
