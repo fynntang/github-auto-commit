@@ -24,21 +24,7 @@ try {
         exec(cmd_commit)
         exec(cmd_push)
     }
-    schedule.scheduleJob('0 0 14 * * *',()=>{
-        pullNewCode()
-        addNewCode()
-        console.log('scheduleCronstyle:' + new Date());
-        pushNewCode()
-    });
-
-    schedule.scheduleJob('0 0 15 * * *',()=>{
-        pullNewCode()
-        addNewCode()
-        console.log('scheduleCronstyle:' + new Date());
-        pushNewCode()
-    });
-
-    schedule.scheduleJob('0 0 16 * * *',()=>{
+    schedule.scheduleJob('0 0 14-16 * * *',()=>{
         pullNewCode()
         addNewCode()
         console.log('scheduleCronstyle:' + new Date());
